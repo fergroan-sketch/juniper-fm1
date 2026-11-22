@@ -1,4 +1,4 @@
-# the factory patches, each played: app/build/host/junofm1_host app/tests/demo.txt OUTDIR
+# the factory patches, each played: app/build/host/juniperfm1_host app/tests/demo.txt OUTDIR
 wait 600
 master 3600
 turn PRESET -1

@@ -1,5 +1,5 @@
-# JUNO FM-1 in the host simulator: tools/build.py app --host, then
-#   app/build/host/junofm1_host app/tests/basic.txt app/build/host
+# JUNIPER FM-1 in the host simulator: tools/build.py app --host, then
+#   app/build/host/juniperfm1_host app/tests/basic.txt app/build/host
 wait 600
 expect patch 1
 shot home.png

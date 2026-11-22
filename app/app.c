@@ -1,5 +1,5 @@
 /* SPDX-License-Identifier: MPL-2.0 */
-/* JUNO FM-1: the app around the engine (juno.c). The FM-1's controls as a Juno-106's panel, in pages, with
+/* JUNIPER FM-1: the app around the engine (juno.c). The FM-1's controls as a Juno-106's panel, in pages, with
  * superOS-106's additions (its manual is the guide for what they do):
  *
  *   HOME  the patch: PRESET / SELECT +-1, ALGO +-8; K1..K4 FREQ, RES, VCF ENV, CHORUS

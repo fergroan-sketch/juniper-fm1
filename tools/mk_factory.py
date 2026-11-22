@@ -1,6 +1,6 @@
 import sys
 H = ["/* SPDX-License-Identifier: MPL-2.0 */",
-     "/* JUNO FM-1's factory bank, written by tools/gen_factory.py: designed for this firmware, none copied from any",
+     "/* JUNIPER FM-1's factory bank, written by tools/gen_factory.py: designed for this firmware, none copied from any",
      " * instrument. A01 INIT; then pads, arps, bass, brass, sub, leads, strings, plucks, stabs, chords. */",
      "/*   rate dly rng lfo pwm src saw pls sub noi hpf frq res env pol vlf kyb vca lvl  A   D   S   R  cho */"]
 for l in open(sys.argv[1]):

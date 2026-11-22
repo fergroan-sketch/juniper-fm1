@@ -1,0 +1,10 @@
+{
+  "what": "A six-voice polysynth inspired by the Juno-106: one DCO a voice with saw, pulse/PWM, sub and noise, a high-pass, a resonant four-pole low-pass, one ADSR, an LFO with delay and a stereo chorus, with 128 patches, chord memory and an arpeggiator. Unofficial: not affiliated with or endorsed by Roland or M-VAVE.",
+  "author": "Fergus",
+  "kinds": [
+    "synth"
+  ],
+  "image": "card.png",
+  "color": "#D63A2E",
+  "play": "https://fergroan-sketch.github.io/juniper-fm1/play/"
+}

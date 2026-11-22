@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Install · JUNOFM1</title>
+<title>Install · JUNIPERFM1</title>
 <style>
   /* light: the coral and the dim brown darkened just enough for 4.5:1 on the cream (and white on the coral) */
   :root { --bg: #faf4e8; --fg: #48392f; --dim: #6e5c4b; --accent: #b84a1e; --on-accent: #fff; --bad: #a3271b; --focus: #1f6fd1; }
@@ -61,7 +61,7 @@
 <body>
 <main>
   <button type="button" class="lang" id="lang" lang="ja">日本語</button>
-  <h1>Install JUNOFM1</h1>
+  <h1>Install JUNIPERFM1</h1>
   <p data-t="intro">Connect the FM-1 by USB, then press Install. It works in Chrome or Edge; the browser asks once to allow MIDI: allow it.</p>
   <p data-t="warn">Do not unplug the USB cable while writing.</p>
   <p class="small" data-t="direct"></p>
@@ -103,7 +103,7 @@
   <p id="reportstatus" role="status"></p>
   <label class="sr" for="report" data-t="reportlabel">Crash report</label>
   <textarea id="report" readonly hidden rows="14"></textarea>
-  <p><a href="../" data-t="manual">Back to JUNOFM1</a></p>
+  <p><a href="../" data-t="manual">Back to JUNIPERFM1</a></p>
 </main>
 <dialog id="appask" aria-labelledby="appaskh">
   <form method="dialog">
@@ -125,9 +125,9 @@
   </form>
 </dialog>
 <footer>
-  <p class="small">JUNOFM1 is built on fm1-base and felucca-bsp, from Felucca by Leo Kuroshita (@kurogedelic), <a href="https://hugelton.com" target="_blank" rel="noopener">Hügelton Instruments<span class="sr" data-t="newtab"> (opens in a new tab)</span></a>. Built on fm1-base and felucca-bsp. Unofficial: not affiliated with Roland or M-VAVE.<br>
+  <p class="small">JUNIPERFM1 is built on fm1-base and felucca-bsp, from Felucca by Leo Kuroshita (@kurogedelic), <a href="https://hugelton.com" target="_blank" rel="noopener">Hügelton Instruments<span class="sr" data-t="newtab"> (opens in a new tab)</span></a>. Built on fm1-base and felucca-bsp. Unofficial: not affiliated with or endorsed by Roland or M-VAVE.<br>
     Fonts: Barlow Semi Condensed (SIL OFL 1.1). M-VAVE and FM-1 are trademarks of their respective owners.<br>
-    <span data-t="license"></span> <a href="https://example.invalid/juno-fm1" target="_blank" rel="noopener">example.invalid/juno-fm1<span class="sr" data-t="newtab"> (opens in a new tab)</span></a></p>
+    <span data-t="license"></span> <a href="https://github.com/fergroan-sketch/juniper-fm1" target="_blank" rel="noopener">github.com/fergroan-sketch/juniper-fm1<span class="sr" data-t="newtab"> (opens in a new tab)</span></a></p>
 </footer>
 <script type="module">
 // SPDX-License-Identifier: MPL-2.0
@@ -948,13 +948,13 @@ const TEXT = {
     newtab: "（新しいタブで開きます）", progress: "進行状況", pct: " {n}%",
     warn: "書き込み中は USB を抜かないでください。",
     install: "インストール", other: "English",
-    manual: "JUNOFM1 のページへ",
+    manual: "JUNIPERFM1 のページへ",
     direct: "USB ケーブルはパソコンに直接つないでください。Probe や Transporter などの機材は不要です。",
     brick: "万一 FM-1 が起動しなくなった場合は、Mac から標準ファームウェアに戻せます:",
     bricklink: "起動しない FM-1 の復旧（英語）",
     back: "公式ファームウェアに戻すには、このページ下の「純正ファームウェアに戻す」か、M-VAVE 公式のアップデーター M-UPGRADE（Downloads → PC Software → M-UPGRADE）を使います。M-UPGRADE 3.11 はこのページのバージョンを見つけますが、それより古いバージョンは見つけられません（「A USB MIDI device is present but did not answer」と表示されます）。その場合はこのページ下のボタンを使ってください。",
     stockh: "純正ファームウェアに戻す",
-    stockwhy: "M-VAVE の FM-1 ファームウェアを、JUNOFM1（またはそのセーフモード）から同じ USB ケーブルで書き込みます。JUNOFM1 で保存したものは消えることがあります。",
+    stockwhy: "M-VAVE の FM-1 ファームウェアを、JUNIPERFM1（またはそのセーフモード）から同じ USB ケーブルで書き込みます。JUNIPERFM1 で保存したものは消えることがあります。",
     stock1: "M-VAVE の FM-1 ファームウェアをダウンロード:",
     stock2: "ダウンロードしたファイルを選ぶ:",
     stock3: "FM-1 を USB で接続し、下のボタンを押す。",
@@ -980,19 +980,19 @@ const TEXT = {
     reporth: "不具合を報告する",
     reportwhy: "FM-1 がクラッシュしたら、電源を切らずに USB で接続し、下のボタンを押してください。クラッシュの記録は再起動では残りますが、電源を切ると消えます。表示された内容をコピーして、何をしていたかと一緒に送ってください。",
     reportread: "クラッシュの記録を読む", reportcopy: "コピー", reportlabel: "クラッシュの記録",
-    reportwait: "読み込み中…", reportnone: "応答がありません。FM-1 が JUNOFM1 を実行しているか確かめてください。",
+    reportwait: "読み込み中…", reportnone: "応答がありません。FM-1 が JUNIPERFM1 を実行しているか確かめてください。",
     reportok: "読み込みました。コピーして送ってください。", reportcopied: "コピーしました。",
     mboot: "m-bootloader も書き込む: 電源を入れるときに PLAY を押したままでリカバリーメニュー、REC でアップデートモード。ファームウェアが起動しないときにも使えます。",
     mbootwhy: "Julius Vitkauskas によるオープンなブートローダー（MIT）。M-VAVE のブートローダーと置き換わり、ファームウェアを更新しても残ります。「純正ファームウェアに戻す」で M-VAVE のものに戻ります。",
     confirmh: "インストールの前に",
     confirm1: "書き込み中、FM-1 の画面には UPDATING と進み具合が出るか、暗いままになります。このページに「完了しました」と出るまで、USB ケーブルを抜いたり電源を切ったりしないでください。数分かかることがあります。",
     confirmboot: "ファームウェアの後に m-bootloader を書き込みます。FM-1 はその間にもう一度再起動します。",
-    bakh: "先にバックアップを。", confirmbak: "書き込みで JUNOFM1 に保存したものが消えることがあります。",
+    bakh: "先にバックアップを。", confirmbak: "書き込みで JUNIPERFM1 に保存したものが消えることがあります。",
     bakok: "バックアップを取った（または残したいものはない）",
-    backuplink: "JUNOFM1 をバックアップする", confirmgo: "書き込む", confirmcancel: "キャンセル",
+    backuplink: "JUNIPERFM1 をバックアップする", confirmgo: "書き込む", confirmcancel: "キャンセル",
     bootstart: "m-bootloader を書き込み中", bootwrite: "m-bootloader を書き込み中。FM-1 は自動で再起動します",
     bootdone: "完了しました（m-bootloader 付き）",
-    bootrefused: "JUNOFM1 はインストールされましたが、m-bootloader は書き込めませんでした。ほかは何も変わっていません。",
+    bootrefused: "JUNIPERFM1 はインストールされましたが、m-bootloader は書き込めませんでした。ほかは何も変わっていません。",
     stockdamaged: "このファイルは壊れています。もう一度ダウンロードしてください。",
     stockunknown: "M-VAVE の FM-1 ファームウェアです（このページにチェックサムのないバージョン）。書き込む前に FM-1 がもう一度確認します。ボタンを押してください。",
     stockmodified: "このファイルは M-VAVE のものではありません。チェックサムを知っているバージョンだと名乗っていますが、チェックサムが一致しません。上のリンクからもう一度ダウンロードしてください。",
@@ -1001,12 +1001,12 @@ const TEXT = {
     tryport: "試す", pickwait: "問い合わせ中…", pickempty: "ほかの MIDI ポートはありません。",
     picknone: "{port} からは FM-1 の応答がありません。",
     pickok: "{port} で {id} が見つかりました。このブラウザが覚えておきます。もう一度押してください。",
-    res: "JUNOFM1 のデータを書き込み中", resdone: "完了しました（JUNOFM1 のデータも書き込みました）",
-    resfail: "JUNOFM1 はインストールされ、動きます。ただしJUNOFM1 のデータは、もう一度インストールするまでありません。書き込めなかった理由: ",
+    res: "JUNIPERFM1 のデータを書き込み中", resdone: "完了しました（JUNIPERFM1 のデータも書き込みました）",
+    resfail: "JUNIPERFM1 はインストールされ、動きます。ただしJUNIPERFM1 のデータは、もう一度インストールするまでありません。書き込めなかった理由: ",
     res2: "転送が途中で止まりました。", res7: "FM-1 がメモリを消去できませんでした。", res8: "FM-1 がメモリに書き込めませんでした。",
-    res10: "FM-1 が再生中です。止めてから、もう一度インストールしてください。", res20: "このJUNOFM1 のデータは JUNOFM1 の別のビルドのものです。",
+    res10: "FM-1 が再生中です。止めてから、もう一度インストールしてください。", res20: "このJUNIPERFM1 のデータは JUNIPERFM1 の別のビルドのものです。",
     res21: "FM-1 が保存したものを移動中です。電源を入れ直してから、もう一度インストールしてください。",
-    res22: "書き込んだ内容の確認に失敗しました。", resload: "JUNOFM1 のデータのファイルを読み込めませんでした。ページを再読み込みしてください。",
+    res22: "書き込んだ内容の確認に失敗しました。", resload: "JUNIPERFM1 のデータのファイルを読み込めませんでした。ページを再読み込みしてください。",
     resnoreturn: "インストール後、FM-1 が応答しませんでした。", reslost: "USB の接続が切れました。",
     resother: "エラーコード ",
   },
@@ -1015,13 +1015,13 @@ const TEXT = {
     newtab: " (opens in a new tab)", progress: "Progress", pct: ", {n} percent",
     warn: "Do not unplug the USB cable while writing.",
     install: "Install", other: "日本語",
-    manual: "Back to JUNOFM1",
+    manual: "Back to JUNIPERFM1",
     direct: "Connect the USB cable directly to the computer. No probe or Transporter is needed.",
     brick: "If the FM-1 no longer starts, a Mac can put the stock firmware back:",
     bricklink: "recovering an FM-1 that won't start",
     back: "To go back to the official firmware, use \"Back to the stock firmware\" below, or M-VAVE's own updater, M-UPGRADE (Downloads → PC Software → M-UPGRADE). M-UPGRADE 3.11 finds the version on this page, not older ones (it says \"A USB MIDI device is present but did not answer\"): use the button below for those.",
     stockh: "Back to the stock firmware",
-    stockwhy: "This writes M-VAVE's own FM-1 firmware back, from JUNOFM1 (or its safe mode, or another firmware with the same update entry) over the same USB cable. What JUNOFM1 saved may be lost.",
+    stockwhy: "This writes M-VAVE's own FM-1 firmware back, from JUNIPERFM1 (or its safe mode, or another firmware with the same update entry) over the same USB cable. What JUNIPERFM1 saved may be lost.",
     stock1: "Download M-VAVE's FM-1 firmware:",
     stock2: "Choose the file you downloaded:",
     stock3: "Connect the FM-1 by USB and press the button below.",
@@ -1047,19 +1047,19 @@ const TEXT = {
     reporth: "Report a problem",
     reportwhy: "If the FM-1 crashed, don't switch it off: connect it by USB and press the button below. The crash record survives a restart, but not switching off. Copy what appears and send it, with what you were doing at the time.",
     reportread: "Read the crash report", reportcopy: "Copy", reportlabel: "Crash report",
-    reportwait: "Reading…", reportnone: "No answer. Check that the FM-1 is running JUNOFM1.",
+    reportwait: "Reading…", reportnone: "No answer. Check that the FM-1 is running JUNIPERFM1.",
     reportok: "Read. Copy it and send it.", reportcopied: "Copied.",
     mboot: "Also install m-bootloader: hold PLAY while switching on for a recovery menu, or REC for update mode, even when a firmware won't start.",
     mbootwhy: "An open bootloader by Julius Vitkauskas (MIT). It replaces M-VAVE's bootloader and stays through firmware updates; \"Back to the stock firmware\" puts M-VAVE's back.",
     confirmh: "Before you install",
     confirm1: "While it is written, the FM-1's screen shows UPDATING and a bar, or stays dark. Don't unplug the USB cable or switch the FM-1 off until this page says Done. It can take several minutes.",
     confirmboot: "m-bootloader is written after the firmware: the FM-1 restarts once more for it.",
-    bakh: "Back up first.", confirmbak: "Installing can lose what JUNOFM1 has saved.",
+    bakh: "Back up first.", confirmbak: "Installing can lose what JUNIPERFM1 has saved.",
     bakok: "I've backed up, or have nothing to keep.",
-    backuplink: "Back up JUNOFM1", confirmgo: "Install", confirmcancel: "Cancel",
+    backuplink: "Back up JUNIPERFM1", confirmgo: "Install", confirmcancel: "Cancel",
     bootstart: "Installing m-bootloader", bootwrite: "Installing m-bootloader: the FM-1 restarts by itself",
     bootdone: "Done, with m-bootloader",
-    bootrefused: "JUNOFM1 is installed, but m-bootloader could not be: nothing else was changed.",
+    bootrefused: "JUNIPERFM1 is installed, but m-bootloader could not be: nothing else was changed.",
     stockdamaged: "That file is damaged. Download it again.",
     stockunknown: "That is M-VAVE's FM-1 firmware, a version this page has no checksum for. The FM-1 checks it again before writing. Press the button to install it.",
     stockmodified: "That file is not M-VAVE's: it says it is a version whose checksum this page knows, and its checksum differs. Download it again from the link above.",
@@ -1068,12 +1068,12 @@ const TEXT = {
     tryport: "Try", pickwait: "Asking…", pickempty: "No other MIDI ports.",
     picknone: "No FM-1 answered on {port}.",
     pickok: "Found {id} on {port}. This browser remembers it. Press the button again.",
-    res: "Writing JUNOFM1's data", resdone: "Done, with JUNOFM1's data written too.",
-    resfail: "JUNOFM1 is installed and works, but without JUNOFM1's data until you install it again. Not written: ",
+    res: "Writing JUNIPERFM1's data", resdone: "Done, with JUNIPERFM1's data written too.",
+    resfail: "JUNIPERFM1 is installed and works, but without JUNIPERFM1's data until you install it again. Not written: ",
     res2: "the transfer stopped.", res7: "the FM-1 could not erase its memory.", res8: "the FM-1 could not write its memory.",
-    res10: "the FM-1 is playing. Stop it, then install again.", res20: "the file of JUNOFM1's data is for another build of JUNOFM1.",
+    res10: "the FM-1 is playing. Stop it, then install again.", res20: "the file of JUNIPERFM1's data is for another build of JUNIPERFM1.",
     res21: "the FM-1 is still moving what it has saved. Switch it off and on, then install again.",
-    res22: "what was written did not check.", resload: "the file of JUNOFM1's data did not load. Reload the page.",
+    res22: "what was written did not check.", resload: "the file of JUNIPERFM1's data did not load. Reload the page.",
     resnoreturn: "the FM-1 did not answer after the update.", reslost: "the USB connection was lost.",
     resother: "error code ",
   },
@@ -1118,7 +1118,7 @@ const log = (t) => {
   if (atEnd) el.scrollTop = el.scrollHeight;
 };
 let image = null, boot = null, res = null;
-const meta = {"version": "0.5.1", "product": "FM-1_61000501", "pkg": "../firmware/junofm1-0.5.1.fwsc", "backup": false, "res": null, "boot": {"pkg": "../firmware/m-bootloader-2.4.fwsc", "version": "2.4", "sha256": "28fb1336dbff22882f545169d57afbb5a732eeb6268331aaa444f1c657b286d3"}};
+const meta = {"version": "0.5.1", "product": "FM-1_61000501", "pkg": "../firmware/juniperfm1-0.5.1.fwsc", "backup": false, "res": null, "boot": {"pkg": "../firmware/m-bootloader-2.4.fwsc", "version": "2.4", "sha256": "28fb1336dbff22882f545169d57afbb5a732eeb6268331aaa444f1c657b286d3"}};
 /* the firmware's own steps around an install (its site's install_app script, or none): before(midi, ui) runs before
    anything is written, may ask (ui.ask) and returns its state, or false to stop there; after(midi, ui, state) once
    the new firmware has started (it waits for it itself). A failure in after is said, the install stays done */
@@ -1160,7 +1160,7 @@ window.addEventListener("beforeunload", (e) => { if (writing) { e.preventDefault
     if (productOf(pkg) !== meta.product) { sayK("badpkg"); return; }
     image = logicalImage(pkg);
     try { checkUfw(image); } catch (_) { image = null; sayK("badpkg"); return; }
-    say(`JUNOFM1 ${meta.version}`);
+    say(`JUNIPERFM1 ${meta.version}`);
     $("go").disabled = false;
   } catch (e) { sayK("loadfail", e.message); }
   /* m-bootloader: offered only when its package is here and is the one the site was made with */

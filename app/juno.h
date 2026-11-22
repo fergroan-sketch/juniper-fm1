@@ -1,5 +1,5 @@
 /* SPDX-License-Identifier: MPL-2.0 */
-/* JUNO FM-1: a polysynth voice modelled on the Roland Juno-106's published design (its owner's manual and service
+/* JUNIPER FM-1: a polysynth voice modelled on the Roland Juno-106's published design (its owner's manual and service
  * notes: one DCO per voice with saw, pulse/PWM, sub-octave square and noise; a high-pass after the voices; a resonant
  * four-pole low-pass per voice; one ADSR; one LFO with delay; a VCA in ENV or GATE mode; the stereo BBD chorus), with
  * performance features after superOS-106's (voice modes, chord memory, arpeggiator, velocity, a second envelope for

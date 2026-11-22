@@ -1,5 +1,5 @@
 /* SPDX-License-Identifier: MPL-2.0 */
-/* JUNO FM-1's engine (juno.h).
+/* JUNIPER FM-1's engine (juno.h).
  *
  * The voice is modelled on the Juno-106 as its service notes and owner's manual describe it: a DCO (a clocked
  * counter resetting a ramp; the pulse a comparator on that ramp; the sub-octave a flip-flop on its reset), the

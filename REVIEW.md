@@ -1,15 +1,16 @@
-# JUNO FM-1 0.5.1: reviewer's report
+# JUNIPER FM-1 0.5.1: reviewer's report
 
 22 November 2026. This covers releases 0.4, 0.5 and 0.5.1: the 128-patch factory bank, arpeggios stored per patch, the
-opened-up envelopes and filters, and the installer site. Version 0.3 is the baseline.
+opened-up envelopes and filters, the installer site and the online player. Version 0.3 is the baseline.
+Up to 0.5 the firmware was called JUNO FM-1; 0.5.1 is published as JUNIPER FM-1.
 
 ## In brief
 
 | | |
 | --- | --- |
-| Package | `site/firmware/junofm1-0.5.1.fwsc`: 616,231 bytes, identity `FM-1_61000501` |
-| SHA-256 | `89cad11782e2e5193611d6cc1a9cab7c66badd21d1e7a7ecad9850a3e8de5f86` |
-| App image | 241,732 bytes |
+| Package | `site/firmware/juniperfm1-0.5.1.fwsc`: 616,231 bytes, identity `FM-1_61000501` |
+| SHA-256 | `2e8e709fd93fa2425b4537a9c1d9410ad48af288419925c3e7df1981cc11bc2c` |
+| App image | 241,764 bytes |
 | RAM | .data+.bss 77,816 of 98,304 B (79%); .ram_text 7,604 of 32,768 B; pool 109,472 of 344,064 B |
 | Build checks | build.py's own checks pass: the radio's RAM code, no inlined 64-bit multiplies, no soft-double, register access through felucca-bsp only |
 | Host checks | all 30 `expect`s in basic.txt and features.txt pass, plus the 3 in arp_patch.txt and the 4 in sysex_slot.txt |
@@ -41,16 +42,22 @@ opened-up envelopes and filters, and the installer site. Version 0.3 is the base
      it kept the old slot's mode, chord, arpeggio and name.
    - **SAVE light.** It now lights only for unsaved patch edits (the edit buffer or a block loaded by SysEx), not
      after a patch change alone.
-   - **Levels.** SWEEP and SOFT SUB had their cutoff and level raised. `BANK_MAGIC` stays `"JNB4"`, so what 0.5
-     saved is kept.
-7. **Installer site.** `site/` holds the installer, the 0.5 package and m-bootloader 2.4. It's served by
-   "Open JUNO installer.command" on http://localhost:8106. The front page and README now show the installer
-   (`app/site/img/install.png`).
+   - **Levels.** SWEEP and SOFT SUB had their cutoff raised and their level set to 110 and 100. `BANK_MAGIC`
+     stays `"JNB4"`, so what 0.5 saved is kept.
+7. **The name.** The firmware is now JUNIPER FM-1: on the splash, crash and safe-mode screens, over USB, in
+   firmware.json, the site and the docs. The package is `juniperfm1-<version>.fwsc`. The identity prefix stays
+   `FM-1_61`, so it installs over JUNO FM-1 0.5 and keeps its saves. Source files and symbols (`juno.c`,
+   `juno_*`) keep their names.
+8. **Site and player.** `tools/make_pages.sh` builds `site/` for GitHub Pages: the front page, the installer, the
+   0.5.1 package, m-bootloader 2.4, and `play/`, which runs the package in fm1-emu from the site's own copy.
+   `fm1.toml` points `repo` and `install` at fergroan-sketch/juniper-fm1 and its Pages site. `fmhub.json` and
+   `card.png` (480 × 480) are there for the firmware hub. Offline, "Open JUNIPER installer.command" serves `site/`
+   on http://localhost:8106.
 
 ## How it was checked
 
 - **Factory table.** factory.h matched the SHA-256 checksums supplied with each bank (0.4: `f1a4928c…7bee`;
-  0.5: `248669c0…edb0`; 0.5.1: `4745dec4…67b6`). A `_Static_assert` keeps the table at exactly 128 patches, and another checks that the
+  0.5: `248669c0…edb0`; 0.5.1 with the new levels and name: `3df9a329…d39d`). A `_Static_assert` keeps the table at exactly 128 patches, and another checks that the
   arpeggio fits in the spare bytes.
 - **Host simulator.** I ran `sh build.sh host`. basic.txt and features.txt cover playing, pages, voice modes,
   chord memory, the arpeggiator, Juno-106 SysEx in and slider CCs. arp_patch.txt checks that turning to A15
@@ -62,7 +69,7 @@ opened-up envelopes and filters, and the installer site. Version 0.3 is the base
   - **0.5:** every patch lasts at least 0.49 s (median 0.76 s). The shortest are the gated ARP SQUARE, INIT and
     ORGAN, which stop with the key, as they should.
 - **Site.** Served locally: /install/, the .fwsc and the front page returned 200, and the .fwsc on the site has the
-  same SHA-256 as the build. The installer page loads the 0.5 metadata and enables Install (see the screenshot).
+  same SHA-256 as the build. The installer page loads the 0.5.1 metadata and enables Install (see the screenshot).
 
 ## Not checked
 
@@ -83,19 +90,19 @@ opened-up envelopes and filters, and the installer site. Version 0.3 is the base
 3. **Arpeggiator already running.** If the arpeggiator is already running (on or hold) when an arp patch is
    chosen, the patch takes it over, and the next patch without an arpeggio turns it off. That stops a hold the
    player had set by hand before.
-4. **SWEEP and SOFT SUB levels (changed in 0.5.1, now a little loud).** These were about 10 dB quiet. Measured
-   on the host after 0.5.1, they peak at −25.8 and −22.9 dBFS, while most of the bank sits around −32 and the
-   loudest other patches reach about −24. SOFT SUB is now the loudest patch, and SWEEP is among the louder ones.
-   Lowering their level slider (about 100 for SOFT SUB, 110 for SWEEP) would bring them into line.
-5. **Placeholder links.** `fm1.toml` still has `example.invalid` for `repo` and `install`, so the page footer and
-   firmware.json point nowhere. They should be set once the GitHub repository (and Pages, if used) exists.
+4. **SWEEP and SOFT SUB levels (fixed in 0.5.1).** These were about 10 dB quiet in 0.5. On the host they now
+   peak at −28.3 and −27.0 dBFS, inside the bank's range (most patches sit around −32, the loudest at about −24).
+5. **Links not live yet.** `fm1.toml`, firmware.json, fmhub.json and the site point at
+   github.com/fergroan-sketch/juniper-fm1 and fergroan-sketch.github.io/juniper-fm1. They work once the
+   repository is pushed and Pages is on. The player (`play/`) can only be tried online: fm1-emu fetches the
+   package from the Pages copy.
 6. **Stale demo renders.** `demo/` (not in git) holds WAVs of the old 18-patch bank. `app/tests/demo.txt` can
    render the current bank.
 7. **Other bank files.** `tools/bank-0.5-alt.txt` and `tools/open_up.py` are a second opened-up bank I made before
    the chosen one arrived. It isn't built; it's kept for comparison.
-8. **Naming.** The firmware uses the name "JUNO", a Roland trademark. The README and site say it is unofficial
-   and not affiliated with Roland or M-VAVE, and the engine is written from the published design with no code or
-   data from Roland or any emulation. Whether that's enough for a public repository is the owner's call.
+8. **Naming.** Renamed JUNIPER FM-1 for the public repository, so it no longer uses Roland's "JUNO" as a brand.
+   The Juno-106 is named only as what inspired it and as the source of its SysEx format, with the line
+   "Unofficial: not affiliated with or endorsed by Roland or M-VAVE".
 
 ## Files to read first
 
@@ -103,3 +110,4 @@ opened-up envelopes and filters, and the installer site. Version 0.3 is the base
 - `app/factory.h` and `tools/bank.txt`: the bank, one patch per line.
 - `app/tests/arp_patch.txt` and `app/tests/sysex_slot.txt`: the new host tests.
 - `PRESETS.md`: the patch list.
+- `app/site/play.html` and `tools/make_pages.sh`: the online player and the Pages site.

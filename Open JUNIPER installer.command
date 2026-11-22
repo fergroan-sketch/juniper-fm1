@@ -1,5 +1,5 @@
 #!/bin/sh
-# Serves the JUNO FM-1 installer site on http://localhost:8106 and opens it in Chrome (or Edge).
+# Serves the JUNIPER FM-1 installer site on http://localhost:8106 and opens it in Chrome (or Edge).
 # Close this Terminal window (or press Ctrl-C) to stop the server.
 cd "$(dirname "$0")/site" || { echo "no site folder next to this script"; exit 1; }
 URL="http://localhost:8106/install/"

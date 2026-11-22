@@ -1,11 +1,11 @@
 /* SPDX-License-Identifier: MPL-2.0 */
-/* JUNO FM-1: a Juno-106 style polysynth firmware for the M-VAVE FM-1, on fm1-base. Unofficial: not affiliated with
- * or endorsed by Roland or M-VAVE. This header is the app's half of the contract with the platform. */
+/* JUNIPER FM-1: a polysynth firmware for the M-VAVE FM-1, inspired by the Juno-106, on fm1-base. Unofficial: not
+ * affiliated with or endorsed by Roland or M-VAVE. This header is the app's half of the contract with the platform. */
 #pragma once
 #include <stdint.h>
 #include "plat.h"
 
-#define APP_NAME "JUNO FM-1"
+#define APP_NAME "JUNIPER FM-1"
 #define APP_SPLASH_RGB RGB(214, 58, 46)
 #define APP_BLOCK 256u                   /* frames per audio block: 5.8 ms at 44.1 kHz */
 #define APP_TOUCH                        /* velocity from the keys (lib/touch.h) */

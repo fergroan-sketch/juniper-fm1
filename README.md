@@ -1,11 +1,17 @@
-# JUNO FM-1
+# JUNIPER FM-1
 
-A Juno-106 style polysynth firmware for the M-VAVE FM-1, built on
-[fm1-base](https://github.com/charlesvestal/fm1-base) (commit `2bb8e74`). Unofficial: not affiliated with or endorsed
-by Roland or M-VAVE. The engine is written from scratch from the Juno-106's published design. It contains no code or
-data from Roland, Cherry Audio or any other emulation.
+A six-voice polysynth firmware for the M-VAVE FM-1, built on
+[fm1-base](https://github.com/charlesvestal/fm1-base) (commit `2bb8e74`). A polysynth inspired by the Juno-106.
+Unofficial: not affiliated with or endorsed by Roland or M-VAVE. The engine is written from scratch from the Juno-106's
+published design. It contains no code or data from Roland, Cherry Audio or any other emulation.
 
-**Release 0.5.1.** 128 factory patches (see [PRESETS.md](PRESETS.md)); install it with the web installer below.
+**Release 0.5.1.** 128 factory patches (see [PRESETS.md](PRESETS.md)).
+
+- **Play it in your browser:** https://fergroan-sketch.github.io/juniper-fm1/play/ (the real firmware on
+  [fm1-emu](https://joakimeriksson.github.io/fm1-emu/), an emulated FM-1).
+- **Install it:** https://fergroan-sketch.github.io/juniper-fm1/install/ (Chrome or Edge, FM-1 on USB), or see
+  "Installing" below.
+- **Download:** the `.fwsc` is on the [releases page](https://github.com/fergroan-sketch/juniper-fm1/releases).
 
 ## The sound
 
@@ -74,17 +80,18 @@ In (USB, Bluetooth, TRS) and out (USB, Bluetooth):
     app/juno.c, juno.h   the engine (pure C, float; runs on the FM-1 and on a computer)
     app/app.c, app.h     the FM-1 app: pages, knobs, patches, MIDI
     app/fm1.toml         build settings
-    app/tests/           host simulator scripts (basic.txt and features.txt check; demo.txt renders every factory patch)
+    app/tests/           host simulator scripts (basic, features, arp_patch and sysex_slot check; demo.txt renders every factory patch)
     host/render.c        a standalone engine renderer for quick listening tests
-    demo/                WAV renders of the factory patches, from the host simulator
+    tools/bank.txt       the factory bank, one patch a line; tools/mk_factory.py makes app/factory.h from it
+    tools/make_pages.sh  the GitHub Pages site (site/: installer, firmware, play/)
 
 ## Building
 
-On Fergus's Mac everything is set up (Docker Desktop, fm1-base at `2bb8e74` with its toolchain in
-`fm1-base/.toolchain`). From the FM1 folder:
+Put this repository beside fm1-base (at `2bb8e74`, with its toolchain in `fm1-base/.toolchain`). From the folder
+that holds both:
 
-    sh juno-fm1/build.sh host     # the host simulator and its checks
-    sh juno-fm1/build.sh          # the firmware: juno-fm1/app/build/junofm1.fwsc
+    sh juniper-fm1/build.sh host     # the host simulator and its checks
+    sh juniper-fm1/build.sh          # the firmware: juniper-fm1/app/build/juniperfm1.fwsc
 
 Docker Desktop must be running. With `ble = true` the build needs more of JieLi's AC79 SDK than fm1-base's setup
 fetches; the script points `AC79_SDK` at `fm1-base/.toolchain/ac79-sdk-full`, where those folders were fetched.
@@ -94,15 +101,17 @@ Elsewhere: `git clone --recursive https://github.com/charlesvestal/fm1-base`, th
 
 ## Installing
 
-![The JUNO FM-1 installer](app/site/img/install.png)
+![The JUNIPER FM-1 installer](app/site/img/install.png)
 
-Back up your FM-1 first: installing can lose what is saved on it. Then, on a Mac, double-click
-**Open JUNO installer.command**: it serves `site/` on http://localhost:8106 and opens the installer in Chrome (or
+Back up your FM-1 first: installing can lose what is saved on it. Then open
+https://fergroan-sketch.github.io/juniper-fm1/install/ in Chrome or Edge. Offline, on a Mac, double-click
+**Open JUNIPER installer.command**: it serves `site/` on http://localhost:8106 and opens the installer in Chrome (or
 Edge). Connect the FM-1 by USB, press **Install**, and allow MIDI when the browser asks. Do not unplug the cable while
 it writes. The same page can put M-VAVE's stock firmware back ("Back to the stock firmware").
 
-The package is also in `site/firmware/junofm1-0.5.1.fwsc`, for fm1-base's command-line installer:
-`python3 tools/fm1_install.py junofm1-0.5.1.fwsc`.
+The package is also in `site/firmware/juniperfm1-0.5.1.fwsc`, for fm1-base's command-line installer:
+`python3 tools/fm1_install.py juniperfm1-0.5.1.fwsc`.
 
-On its first start, 0.5 loads its factory bank in place of any bank saved by 0.2 to 0.4. 0.5.1 keeps what 0.5
-saved: its two level changes reach a slot only if that block was never saved.
+On its first start, 0.5 loads its factory bank in place of any bank saved by 0.2 to 0.4. 0.5.1 installs over 0.5
+(the same package identity) and keeps what 0.5 saved: its two level changes reach a slot only if that block was never
+saved.
