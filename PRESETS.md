@@ -1,12 +1,12 @@
 # JUNO FM-1 factory patches
 
-128 patches, A01..B64, laid out by kind (release 0.5). Every patch was written for this firmware; none is copied
+128 patches, A01..B64, laid out by kind (release 0.5.1). Every patch was written for this firmware; none is copied
 from any instrument or emulation.
 
 - The arp patches (A15..A27) start the arpeggiator when chosen, with their own order, range, rate and gate;
   the next patch without an arpeggio stops it. Saving a patch stores the arpeggio as it is playing.
 - 0.5 opened the bank up: longer decays and releases, higher cutoffs and evened levels, so no patch is a blip
-  (0.4's bank is kept as tools/bank-0.4.txt).
+  (0.4's bank is kept as tools/bank-0.4.txt). 0.5.1 brings SWEEP and SOFT SUB up from about 10 dB under the bank.
 - The chord patches (B53..B64, and HOUSE, RAVE and DUB STAB) play their stored chord from one key.
 
 ## A01: init

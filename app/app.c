@@ -358,6 +358,26 @@ void app_panic(void) { juno_panic(); }
 /* ------------------------------------------------------------------ SysEx --- */
 /* from USB (main loop): the Juno-106's messages (F0 41 30/31/32 0n ...) and superOS-106's user scale
  * (F0 41 3D 0n 02 ss [24 nibbles]); p is what lies between F0 and F7 */
+/* a Juno-106 patch has no mode, chord or arpeggio: the slot's old ones would surprise (a pad that arpeggiates) */
+static void sysex_slot_plain(juno_patch_t *t, int pp)
+{
+    static const char hex[] = "0123456789";
+    int k = pp % 64 + 1, i;
+    t->mode = VM_POLY1;
+    t->uni_detune = 0;
+    t->chord_n = 0;
+    for (i = 0; i < 6; i++)
+        t->chord[i] = 0;
+    for (i = 0; i < 5; i++)
+        t->rsv[PATCH_ARP + i] = 0;
+    for (i = 0; i < JUNO_NAME_LEN; i++)
+        t->name[i] = 0;
+    t->name[0] = 'S'; t->name[1] = 'Y'; t->name[2] = 'S'; t->name[3] = 'E'; t->name[4] = 'X'; t->name[5] = ' ';
+    t->name[6] = pp < 64 ? 'A' : 'B';
+    t->name[7] = hex[k / 10];
+    t->name[8] = hex[k % 10];
+}
+
 int app_sysex(const uint8_t *p, uint32_t n)
 {
     uint32_t ch;
@@ -375,6 +395,7 @@ int app_sysex(const uint8_t *p, uint32_t n)
         juno_sw2_in(&t, p[21]);
         if (p[1] == 0x30u) {
             int pp = p[3] & 0x7F;
+            sysex_slot_plain(&t, pp);
             *slot(pp) = t;
             blk_dirty[pp / BLK_N] = 1;   /* saved by SAVE, with the patch */
             if (pp == set.patch) {
@@ -918,7 +939,7 @@ static void input(void)
             lit |= 1u << B_ARP;          /* on: lit; hold: a flash at each step */
         if (juno_learning() && (now / 250u) & 1u)
             lit |= 1u << B_PLAY;
-        if (edit_dirty || set_dirty)
+        if (edit_dirty || blk_dirty[0] || blk_dirty[1] || blk_dirty[2] || blk_dirty[3])   /* unsaved patches only: a patch change alone does not light it */
             lit |= 1u << B_SAVE;
         plat_glow(1);
         plat_leds(lit, keys);

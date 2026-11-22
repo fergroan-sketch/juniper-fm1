@@ -1,0 +1,11 @@
+wait 600
+sysex F0 41 30 00 0F 39 2D 00 37 00 55 00 00 19 34 3B 20 56 28 00 00 1A 18 F7
+wait 30
+turn PRESET 14
+wait 50
+expect patch 15
+expect arp 0
+expect mode 0
+turn PRESET 1
+wait 50
+expect arp 1

@@ -5,7 +5,7 @@ A Juno-106 style polysynth firmware for the M-VAVE FM-1, built on
 by Roland or M-VAVE. The engine is written from scratch from the Juno-106's published design. It contains no code or
 data from Roland, Cherry Audio or any other emulation.
 
-**Release 0.5.** 128 factory patches (see [PRESETS.md](PRESETS.md)); install it with the web installer below.
+**Release 0.5.1.** 128 factory patches (see [PRESETS.md](PRESETS.md)); install it with the web installer below.
 
 ## The sound
 
@@ -101,7 +101,8 @@ Back up your FM-1 first: installing can lose what is saved on it. Then, on a Mac
 Edge). Connect the FM-1 by USB, press **Install**, and allow MIDI when the browser asks. Do not unplug the cable while
 it writes. The same page can put M-VAVE's stock firmware back ("Back to the stock firmware").
 
-The package is also in `site/firmware/junofm1-0.5.fwsc`, for fm1-base's command-line installer:
-`python3 tools/fm1_install.py junofm1-0.5.fwsc`.
+The package is also in `site/firmware/junofm1-0.5.1.fwsc`, for fm1-base's command-line installer:
+`python3 tools/fm1_install.py junofm1-0.5.1.fwsc`.
 
-On its first start, 0.5 loads its factory bank in place of any bank saved by 0.2 to 0.4.
+On its first start, 0.5 loads its factory bank in place of any bank saved by 0.2 to 0.4. 0.5.1 keeps what 0.5
+saved: its two level changes reach a slot only if that block was never saved.
