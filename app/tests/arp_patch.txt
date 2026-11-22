@@ -1,0 +1,9 @@
+# 0.4: an arpeggio patch starts the arpeggiator; the next patch without one stops it
+wait 600
+turn PRESET 13
+wait 50
+expect patch 14
+expect arp 1
+turn PRESET -1
+wait 50
+expect arp 0

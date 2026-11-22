@@ -1,0 +1,171 @@
+# JUNO FM-1 factory patches
+
+128 patches, A01..B64, laid out by kind (release 0.5). Every patch was written for this firmware; none is copied
+from any instrument or emulation.
+
+- The arp patches (A15..A27) start the arpeggiator when chosen, with their own order, range, rate and gate;
+  the next patch without an arpeggio stops it. Saving a patch stores the arpeggio as it is playing.
+- 0.5 opened the bank up: longer decays and releases, higher cutoffs and evened levels, so no patch is a blip
+  (0.4's bank is kept as tools/bank-0.4.txt).
+- The chord patches (B53..B64, and HOUSE, RAVE and DUB STAB) play their stored chord from one key.
+
+## A01: init
+
+- A01 INIT
+
+## A02..A14: pads
+
+- A02 WARM PAD
+- A03 GLASS PAD
+- A04 DARK PAD
+- A05 SLOW SWELL
+- A06 AIR PAD
+- A07 DREAM PAD
+- A08 VELVET PAD
+- A09 SHIMMER
+- A10 SWEEP
+- A11 CHOIR
+- A12 POLY2 PAD
+- A13 NIGHT PAD
+- A14 WIDE PAD
+
+## A15..A27: arps
+
+- A15 ARP PLUCK
+- A16 ARP SEQ
+- A17 ARP BELL
+- A18 ARP BASS
+- A19 ARP SQUARE
+- A20 ARP RESO
+- A21 ARP GLASS
+- A22 ARP DRIVE
+- A23 ARP SLOW
+- A24 ARP PWM
+- A25 ARP TWINKLE
+- A26 ARP ZAP
+- A27 ARP DREAM
+
+## A28..A40: bass
+
+- A28 BASS
+- A29 UNISON BASS
+- A30 PICK BASS
+- A31 RESO BASS
+- A32 PWM BASS
+- A33 FUNK BASS
+- A34 SOFT BASS
+- A35 POLY BASS
+- A36 BOUNCE BASS
+- A37 HOLLOW BASS
+- A38 DIRTY BASS
+- A39 WOBBLE
+- A40 ACID BASS
+
+## A41..A53: brass
+
+- A41 BRASS
+- A42 BRASS SECT
+- A43 SOFT BRASS
+- A44 FAT BRASS
+- A45 HORNS
+- A46 SYNTH BRASS
+- A47 BRASS SWELL
+- A48 POLY2 BRASS
+- A49 TRUMPETS
+- A50 LOW BRASS
+- A51 UNI BRASS
+- A52 BRIGHT HORN
+- A53 MELLOW HORN
+
+## A54..B01: sub
+
+- A54 SUB BASS
+- A55 PURE SUB
+- A56 SINE SUB
+- A57 SUB BOOM
+- A58 SUB PULSE
+- A59 SUB SAW
+- A60 SOFT SUB
+- A61 SUB GROWL
+- A62 SUB PLUCK
+- A63 SUB DRONE
+- A64 UNISON SUB
+- B01 SUB WOBBLE
+
+## B02..B14: leads
+
+- B02 SQUARE LEAD
+- B03 SAW LEAD
+- B04 RESO LEAD
+- B05 FAT LEAD
+- B06 PWM LEAD
+- B07 WHISTLE
+- B08 SOFT LEAD
+- B09 SCREAMER
+- B10 SUB LEAD
+- B11 ACID LEAD
+- B12 FLUTE LEAD
+- B13 SUPERSAW
+- B14 DUAL LEAD
+
+## B15..B27: strings
+
+- B15 STRINGS
+- B16 ENSEMBLE
+- B17 VIOLINS
+- B18 CELLOS
+- B19 SLOW STRING
+- B20 BRIGHT STR
+- B21 PIZZICATO
+- B22 STR MACHINE
+- B23 OCTAVE STR
+- B24 TREMOLO STR
+- B25 SOFT STRING
+- B26 SYNTH STR
+- B27 WIDE STRING
+
+## B28..B40: plucks
+
+- B28 PLUCK
+- B29 SOFT PLUCK
+- B30 BRITE PLUCK
+- B31 HARP
+- B32 WOOD PLUCK
+- B33 GLASS PLUCK
+- B34 RESO PLUCK
+- B35 CLAV
+- B36 STRING PLUK
+- B37 MALLET
+- B38 POLY2 PLUCK
+- B39 LONG PLUCK
+- B40 BELL PLUCK
+
+## B41..B52: stabs
+
+- B41 BRASS STAB
+- B42 HOUSE STAB
+- B43 ORGAN
+- B44 RAVE STAB
+- B45 STRING STAB
+- B46 POLY2 STAB
+- B47 ZAP
+- B48 DUB STAB
+- B49 FUNK STAB
+- B50 SOFT STAB
+- B51 RESO STAB
+- B52 BIG STAB
+
+## B53..B64: chords
+
+- B53 MINOR 7
+- B54 MAJOR 7
+- B55 MINOR 9
+- B56 SUS 4
+- B57 FIFTHS
+- B58 DEEP CHORD
+- B59 MAJOR 9
+- B60 DOMINANT 7
+- B61 ADD 9
+- B62 MINOR PAD
+- B63 POWER CHORD
+- B64 MAJOR 6

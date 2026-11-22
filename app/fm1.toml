@@ -1,0 +1,18 @@
+# JUNO FM-1's build settings (fm1-base tools/build.py)
+name = "JUNOFM1"
+id_prefix = "FM-1_61"            # package identity, this firmware's own
+usb_manufacturer = "junofm1"
+usb_product = "JUNO FM-1"
+o2 = ["juno.c"]                  # the engine, at -O2
+ble = true                       # Bluetooth MIDI (--no-ble builds without it)
+companion = false
+# the site and firmware.json
+tagline = "a Juno-106 style polysynth for the FM-1"
+repo = "https://example.invalid/juno-fm1"   # placeholder: replace with the real source URL
+install = "https://example.invalid/juno-fm1/install/"   # placeholder: local installer is http://localhost:8106/install/
+screenshot = "home.png"
+licence = "MPL-2.0"
+credits = "Built on fm1-base and felucca-bsp. Unofficial: not affiliated with Roland or M-VAVE."
+author = "Fergus"
+description = "A six-voice polysynth in the style of the Roland Juno-106: one DCO per voice with saw, pulse/PWM, sub and noise, a high-pass, a resonant four-pole low-pass, one ADSR, an LFO with delay, and the stereo chorus I, II and I+II."
+tags = ["synth"]

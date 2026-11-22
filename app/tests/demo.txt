@@ -1,0 +1,735 @@
+# the factory patches, each played: app/build/host/junofm1_host app/tests/demo.txt OUTDIR
+wait 600
+master 3600
+turn PRESET -1
+wait 30
+expect patch 0
+wav 01-init.wav
+midi 90 30 64
+midi 90 37 64
+midi 90 3C 64
+midi 90 40 64
+midi 90 43 64
+wait 1200
+midi 80 30 00
+midi 80 37 00
+midi 80 3C 00
+midi 80 40 00
+midi 80 43 00
+wait 150
+midi 90 2D 64
+midi 90 34 64
+midi 90 39 64
+midi 90 3C 64
+midi 90 40 64
+wait 1200
+midi 80 2D 00
+midi 80 34 00
+midi 80 39 00
+midi 80 3C 00
+midi 80 40 00
+wait 150
+midi 90 29 64
+midi 90 30 64
+midi 90 35 64
+midi 90 39 64
+midi 90 3C 64
+wait 1200
+midi 80 29 00
+midi 80 30 00
+midi 80 35 00
+midi 80 39 00
+midi 80 3C 00
+wait 150
+wait 2000
+wavstop
+turn PRESET 1
+wait 30
+expect patch 1
+wav 02-warm-pad.wav
+midi 90 30 64
+midi 90 37 64
+midi 90 3C 64
+midi 90 40 64
+midi 90 43 64
+wait 1200
+midi 80 30 00
+midi 80 37 00
+midi 80 3C 00
+midi 80 40 00
+midi 80 43 00
+wait 150
+midi 90 2D 64
+midi 90 34 64
+midi 90 39 64
+midi 90 3C 64
+midi 90 40 64
+wait 1200
+midi 80 2D 00
+midi 80 34 00
+midi 80 39 00
+midi 80 3C 00
+midi 80 40 00
+wait 150
+midi 90 29 64
+midi 90 30 64
+midi 90 35 64
+midi 90 39 64
+midi 90 3C 64
+wait 1200
+midi 80 29 00
+midi 80 30 00
+midi 80 35 00
+midi 80 39 00
+midi 80 3C 00
+wait 150
+wait 2000
+wavstop
+turn PRESET 1
+wait 30
+expect patch 2
+wav 03-brass.wav
+midi 90 30 64
+midi 90 37 64
+midi 90 3C 64
+midi 90 40 64
+midi 90 43 64
+wait 1200
+midi 80 30 00
+midi 80 37 00
+midi 80 3C 00
+midi 80 40 00
+midi 80 43 00
+wait 150
+midi 90 2D 64
+midi 90 34 64
+midi 90 39 64
+midi 90 3C 64
+midi 90 40 64
+wait 1200
+midi 80 2D 00
+midi 80 34 00
+midi 80 39 00
+midi 80 3C 00
+midi 80 40 00
+wait 150
+midi 90 29 64
+midi 90 30 64
+midi 90 35 64
+midi 90 39 64
+midi 90 3C 64
+wait 1200
+midi 80 29 00
+midi 80 30 00
+midi 80 35 00
+midi 80 39 00
+midi 80 3C 00
+wait 150
+wait 2000
+wavstop
+turn PRESET 1
+wait 30
+expect patch 3
+wav 04-strings.wav
+midi 90 30 64
+midi 90 37 64
+midi 90 3C 64
+midi 90 40 64
+midi 90 43 64
+wait 1200
+midi 80 30 00
+midi 80 37 00
+midi 80 3C 00
+midi 80 40 00
+midi 80 43 00
+wait 150
+midi 90 2D 64
+midi 90 34 64
+midi 90 39 64
+midi 90 3C 64
+midi 90 40 64
+wait 1200
+midi 80 2D 00
+midi 80 34 00
+midi 80 39 00
+midi 80 3C 00
+midi 80 40 00
+wait 150
+midi 90 29 64
+midi 90 30 64
+midi 90 35 64
+midi 90 39 64
+midi 90 3C 64
+wait 1200
+midi 80 29 00
+midi 80 30 00
+midi 80 35 00
+midi 80 39 00
+midi 80 3C 00
+wait 150
+wait 2000
+wavstop
+turn PRESET 1
+wait 30
+expect patch 4
+wav 05-bass.wav
+midi 90 24 64
+wait 220
+midi 80 24 00
+wait 30
+midi 90 24 64
+wait 220
+midi 80 24 00
+wait 30
+midi 90 30 64
+wait 220
+midi 80 30 00
+wait 30
+midi 90 24 64
+wait 220
+midi 80 24 00
+wait 30
+midi 90 27 64
+wait 220
+midi 80 27 00
+wait 30
+midi 90 29 64
+wait 220
+midi 80 29 00
+wait 30
+midi 90 2B 64
+wait 220
+midi 80 2B 00
+wait 30
+midi 90 22 64
+wait 220
+midi 80 22 00
+wait 30
+wait 800
+wavstop
+turn PRESET 1
+wait 30
+expect patch 5
+wav 06-pluck.wav
+midi 90 30 64
+midi 90 37 64
+midi 90 3C 64
+midi 90 40 64
+midi 90 43 64
+wait 1200
+midi 80 30 00
+midi 80 37 00
+midi 80 3C 00
+midi 80 40 00
+midi 80 43 00
+wait 150
+midi 90 2D 64
+midi 90 34 64
+midi 90 39 64
+midi 90 3C 64
+midi 90 40 64
+wait 1200
+midi 80 2D 00
+midi 80 34 00
+midi 80 39 00
+midi 80 3C 00
+midi 80 40 00
+wait 150
+midi 90 29 64
+midi 90 30 64
+midi 90 35 64
+midi 90 39 64
+midi 90 3C 64
+wait 1200
+midi 80 29 00
+midi 80 30 00
+midi 80 35 00
+midi 80 39 00
+midi 80 3C 00
+wait 150
+wait 2000
+wavstop
+turn PRESET 1
+wait 30
+expect patch 6
+wav 07-square-lead.wav
+midi 90 48 64
+wait 300
+midi 80 48 00
+wait 20
+midi 90 4A 64
+wait 300
+midi 80 4A 00
+wait 20
+midi 90 4C 64
+wait 300
+midi 80 4C 00
+wait 20
+midi 90 4F 64
+wait 300
+midi 80 4F 00
+wait 20
+midi 90 4C 64
+wait 300
+midi 80 4C 00
+wait 20
+midi 90 4A 64
+wait 300
+midi 80 4A 00
+wait 20
+midi 90 48 64
+wait 300
+midi 80 48 00
+wait 20
+wait 1000
+wavstop
+turn PRESET 1
+wait 30
+expect patch 7
+wav 08-hollow.wav
+midi 90 30 64
+midi 90 37 64
+midi 90 3C 64
+midi 90 40 64
+midi 90 43 64
+wait 1200
+midi 80 30 00
+midi 80 37 00
+midi 80 3C 00
+midi 80 40 00
+midi 80 43 00
+wait 150
+midi 90 2D 64
+midi 90 34 64
+midi 90 39 64
+midi 90 3C 64
+midi 90 40 64
+wait 1200
+midi 80 2D 00
+midi 80 34 00
+midi 80 39 00
+midi 80 3C 00
+midi 80 40 00
+wait 150
+midi 90 29 64
+midi 90 30 64
+midi 90 35 64
+midi 90 39 64
+midi 90 3C 64
+wait 1200
+midi 80 29 00
+midi 80 30 00
+midi 80 35 00
+midi 80 39 00
+midi 80 3C 00
+wait 150
+wait 2000
+wavstop
+turn PRESET 1
+wait 30
+expect patch 8
+wav 09-sweep.wav
+midi 90 30 64
+midi 90 37 64
+midi 90 3C 64
+midi 90 40 64
+midi 90 43 64
+wait 1200
+midi 80 30 00
+midi 80 37 00
+midi 80 3C 00
+midi 80 40 00
+midi 80 43 00
+wait 150
+midi 90 2D 64
+midi 90 34 64
+midi 90 39 64
+midi 90 3C 64
+midi 90 40 64
+wait 1200
+midi 80 2D 00
+midi 80 34 00
+midi 80 39 00
+midi 80 3C 00
+midi 80 40 00
+wait 150
+midi 90 29 64
+midi 90 30 64
+midi 90 35 64
+midi 90 39 64
+midi 90 3C 64
+wait 1200
+midi 80 29 00
+midi 80 30 00
+midi 80 35 00
+midi 80 39 00
+midi 80 3C 00
+wait 150
+wait 2000
+wavstop
+turn PRESET 1
+wait 30
+expect patch 9
+wav 10-organ.wav
+midi 90 30 64
+midi 90 37 64
+midi 90 3C 64
+midi 90 40 64
+midi 90 43 64
+wait 1200
+midi 80 30 00
+midi 80 37 00
+midi 80 3C 00
+midi 80 40 00
+midi 80 43 00
+wait 150
+midi 90 2D 64
+midi 90 34 64
+midi 90 39 64
+midi 90 3C 64
+midi 90 40 64
+wait 1200
+midi 80 2D 00
+midi 80 34 00
+midi 80 39 00
+midi 80 3C 00
+midi 80 40 00
+wait 150
+midi 90 29 64
+midi 90 30 64
+midi 90 35 64
+midi 90 39 64
+midi 90 3C 64
+wait 1200
+midi 80 29 00
+midi 80 30 00
+midi 80 35 00
+midi 80 39 00
+midi 80 3C 00
+wait 150
+wait 2000
+wavstop
+turn PRESET 1
+wait 30
+expect patch 10
+wav 11-wind.wav
+midi 90 30 64
+midi 90 37 64
+midi 90 3C 64
+midi 90 40 64
+midi 90 43 64
+wait 1200
+midi 80 30 00
+midi 80 37 00
+midi 80 3C 00
+midi 80 40 00
+midi 80 43 00
+wait 150
+midi 90 2D 64
+midi 90 34 64
+midi 90 39 64
+midi 90 3C 64
+midi 90 40 64
+wait 1200
+midi 80 2D 00
+midi 80 34 00
+midi 80 39 00
+midi 80 3C 00
+midi 80 40 00
+wait 150
+midi 90 29 64
+midi 90 30 64
+midi 90 35 64
+midi 90 39 64
+midi 90 3C 64
+wait 1200
+midi 80 29 00
+midi 80 30 00
+midi 80 35 00
+midi 80 39 00
+midi 80 3C 00
+wait 150
+wait 2000
+wavstop
+turn PRESET 1
+wait 30
+expect patch 11
+wav 12-zap.wav
+midi 90 30 64
+midi 90 37 64
+midi 90 3C 64
+midi 90 40 64
+midi 90 43 64
+wait 1200
+midi 80 30 00
+midi 80 37 00
+midi 80 3C 00
+midi 80 40 00
+midi 80 43 00
+wait 150
+midi 90 2D 64
+midi 90 34 64
+midi 90 39 64
+midi 90 3C 64
+midi 90 40 64
+wait 1200
+midi 80 2D 00
+midi 80 34 00
+midi 80 39 00
+midi 80 3C 00
+midi 80 40 00
+wait 150
+midi 90 29 64
+midi 90 30 64
+midi 90 35 64
+midi 90 39 64
+midi 90 3C 64
+wait 1200
+midi 80 29 00
+midi 80 30 00
+midi 80 35 00
+midi 80 39 00
+midi 80 3C 00
+wait 150
+wait 2000
+wavstop
+turn PRESET 1
+wait 30
+expect patch 12
+wav 13-soft-keys.wav
+midi 90 30 64
+midi 90 37 64
+midi 90 3C 64
+midi 90 40 64
+midi 90 43 64
+wait 1200
+midi 80 30 00
+midi 80 37 00
+midi 80 3C 00
+midi 80 40 00
+midi 80 43 00
+wait 150
+midi 90 2D 64
+midi 90 34 64
+midi 90 39 64
+midi 90 3C 64
+midi 90 40 64
+wait 1200
+midi 80 2D 00
+midi 80 34 00
+midi 80 39 00
+midi 80 3C 00
+midi 80 40 00
+wait 150
+midi 90 29 64
+midi 90 30 64
+midi 90 35 64
+midi 90 39 64
+midi 90 3C 64
+wait 1200
+midi 80 29 00
+midi 80 30 00
+midi 80 35 00
+midi 80 39 00
+midi 80 3C 00
+wait 150
+wait 2000
+wavstop
+turn PRESET 1
+wait 30
+expect patch 13
+wav 14-sub-bass.wav
+midi 90 24 64
+wait 220
+midi 80 24 00
+wait 30
+midi 90 24 64
+wait 220
+midi 80 24 00
+wait 30
+midi 90 30 64
+wait 220
+midi 80 30 00
+wait 30
+midi 90 24 64
+wait 220
+midi 80 24 00
+wait 30
+midi 90 27 64
+wait 220
+midi 80 27 00
+wait 30
+midi 90 29 64
+wait 220
+midi 80 29 00
+wait 30
+midi 90 2B 64
+wait 220
+midi 80 2B 00
+wait 30
+midi 90 22 64
+wait 220
+midi 80 22 00
+wait 30
+wait 800
+wavstop
+turn PRESET 1
+wait 30
+expect patch 14
+wav 15-wobble.wav
+midi 90 24 64
+wait 220
+midi 80 24 00
+wait 30
+midi 90 24 64
+wait 220
+midi 80 24 00
+wait 30
+midi 90 30 64
+wait 220
+midi 80 30 00
+wait 30
+midi 90 24 64
+wait 220
+midi 80 24 00
+wait 30
+midi 90 27 64
+wait 220
+midi 80 27 00
+wait 30
+midi 90 29 64
+wait 220
+midi 80 29 00
+wait 30
+midi 90 2B 64
+wait 220
+midi 80 2B 00
+wait 30
+midi 90 22 64
+wait 220
+midi 80 22 00
+wait 30
+wait 800
+wavstop
+turn PRESET 1
+wait 30
+expect patch 15
+wav 16-choir.wav
+midi 90 30 64
+midi 90 37 64
+midi 90 3C 64
+midi 90 40 64
+midi 90 43 64
+wait 1200
+midi 80 30 00
+midi 80 37 00
+midi 80 3C 00
+midi 80 40 00
+midi 80 43 00
+wait 150
+midi 90 2D 64
+midi 90 34 64
+midi 90 39 64
+midi 90 3C 64
+midi 90 40 64
+wait 1200
+midi 80 2D 00
+midi 80 34 00
+midi 80 39 00
+midi 80 3C 00
+midi 80 40 00
+wait 150
+midi 90 29 64
+midi 90 30 64
+midi 90 35 64
+midi 90 39 64
+midi 90 3C 64
+wait 1200
+midi 80 29 00
+midi 80 30 00
+midi 80 35 00
+midi 80 39 00
+midi 80 3C 00
+wait 150
+wait 2000
+wavstop
+turn PRESET 1
+wait 30
+expect patch 16
+wav 17-unison-bass.wav
+midi 90 24 64
+wait 220
+midi 80 24 00
+wait 30
+midi 90 24 64
+wait 220
+midi 80 24 00
+wait 30
+midi 90 30 64
+wait 220
+midi 80 30 00
+wait 30
+midi 90 24 64
+wait 220
+midi 80 24 00
+wait 30
+midi 90 27 64
+wait 220
+midi 80 27 00
+wait 30
+midi 90 29 64
+wait 220
+midi 80 29 00
+wait 30
+midi 90 2B 64
+wait 220
+midi 80 2B 00
+wait 30
+midi 90 22 64
+wait 220
+midi 80 22 00
+wait 30
+wait 800
+wavstop
+turn PRESET 1
+wait 30
+expect patch 17
+wav 18-supersaw.wav
+midi 90 30 64
+midi 90 37 64
+midi 90 3C 64
+midi 90 40 64
+midi 90 43 64
+wait 1200
+midi 80 30 00
+midi 80 37 00
+midi 80 3C 00
+midi 80 40 00
+midi 80 43 00
+wait 150
+midi 90 2D 64
+midi 90 34 64
+midi 90 39 64
+midi 90 3C 64
+midi 90 40 64
+wait 1200
+midi 80 2D 00
+midi 80 34 00
+midi 80 39 00
+midi 80 3C 00
+midi 80 40 00
+wait 150
+midi 90 29 64
+midi 90 30 64
+midi 90 35 64
+midi 90 39 64
+midi 90 3C 64
+wait 1200
+midi 80 29 00
+midi 80 30 00
+midi 80 35 00
+midi 80 39 00
+midi 80 3C 00
+wait 150
+wait 2000
+wavstop
