@@ -101,7 +101,7 @@ Elsewhere: `git clone --recursive https://github.com/charlesvestal/fm1-base`, th
 
 ## Installing
 
-![The JUNIPER FM-1 installer](app/site/img/install.png)
+![The JUNIPER FM-1 installer](app/site/img/installer.png)
 
 Back up your FM-1 first: installing can lose what is saved on it. Then open
 https://fergroan-sketch.github.io/juniper-fm1/install/ in Chrome or Edge. Offline, on a Mac, double-click

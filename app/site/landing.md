@@ -14,6 +14,6 @@ This is version {{VERSION}}. You install it at your own risk, and the installer 
 - [Source on GitHub](https://github.com/fergroan-sketch/juniper-fm1), under MPL-2.0. It's built on fm1-base and
   felucca-bsp, which come from Felucca by Leo Kuroshita, Hügelton Instruments.
 
-![The JUNIPER FM-1 installer](img/install.png "The installer: connect the FM-1 by USB, then press Install")
+![The JUNIPER FM-1 installer](img/installer.png "The installer: connect the FM-1 by USB, then press Install")
 
 Unofficial: not affiliated with or endorsed by Roland or M-VAVE. M-VAVE and FM-1 are trademarks of their owners.
