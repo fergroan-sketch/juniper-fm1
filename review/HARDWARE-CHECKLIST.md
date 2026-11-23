@@ -15,7 +15,7 @@ Record each item as **PASS**, **FAIL** or **NOT TESTED**. For a FAIL, write what
 | 0.2 | Open https://fergroan-sketch.github.io/juniper-fm1/install/ in Chrome | The page ends with "JUNIPERFM1 0.5.1" | | |
 | 0.3 | **Recovery: stock firmware.** Download M-VAVE's `FM-1.fwsc` from www.m-vave.com/download (Downloads › PC Software) and keep it. On the install page, under "Back to the stock firmware", choose that file, but do not press its Install. | The page accepts the file and enables "Install the stock firmware" | | |
 | 0.4 | **Recovery: m-bootloader** (optional). Decide whether to tick "Also install m-bootloader" (PLAY at power-on for a recovery menu, REC for update mode). | – | | Ticked / not ticked |
-| 0.5 | **Backup of saved patches.** JUNO FM-1 0.5 and JUNIPER 0.5.1 have **no backup function**: they weren't built with fm1-base's backup. Write down any patch you have saved and care about: its slot, name and the values on its pages. | List of saved slots | | This is finding J01's gap; see the proposal |
+| 0.5 | **Backup of saved patches.** JUNO FM-1 0.5 and JUNIPER 0.5.1 have **no backup function**: they weren't built with fm1-base's backup. Write down any patch you have saved and care about: its slot, name and the values on its pages. | List of saved slots | | J01's gap (see the proposal). Patches saved under 0.4 may still be in flash if you haven't saved into their 32-slot block since: the proposed 0.5.2 could read them back, so avoid saving into those blocks for now |
 | 0.6 | Note one saved patch to check after the install: slot, name, two knob values. If you have none, save one now in JUNO 0.5, for example A02 with FREQ changed, then SAVE. | – | | |
 
 ## 1. Install and identity
